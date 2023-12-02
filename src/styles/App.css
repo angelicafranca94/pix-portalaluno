@@ -1,0 +1,140 @@
+/* Resetando margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para o container principal do background */
+.background-container {
+  display: flex;
+  width: 100vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+}
+
+/* Estilo para o lado esquerdo (branco) */
+.white-background {
+  flex: 1; /* Ocupa 50% da largura do container pai */
+  background-color: white;
+  align-items: center;
+}
+
+/* Estilo para o conteúdo dentro da div white-background */
+.white-background > * {
+  padding-left: 20px; /* Espaçamento à esquerda */
+}
+
+/* Estilo para o lado direito (cinza claro) */
+.gray-background {
+  flex: 1; /* Ocupa 50% da largura do container pai */
+  background-color: rgb(248, 239, 239);
+}
+
+
+/* Estilo para a div abaixo do botão */
+.info-text {
+  margin-top: 100px; /* Espaçamento maior entre o botão e o texto */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  text-align: left; /* Alinhamento do texto à esquerda */
+  margin-left: 100px; /* Ajuste de margem para mover mais para a direita */
+  width: calc(100% - 160px); /* Largura da div - margem esquerda do botão - largura do botão */
+}
+
+/* Estilos para o texto "FIAP" e número */
+.additional-info {
+  font-size: 18px; /* Tamanho da fonte */
+  margin: 0; /* Remove margens padrão */
+  text-align: left; /* Alinhamento do texto à esquerda */
+  margin-left: 100px; /* Ajuste de margem para alinhar com o restante do conteúdo */
+  width: calc(100% - 180px); /* Ajuste da largura para alinhar com o restante do conteúdo */
+}
+
+/* Estilos para o texto "FIAP" e número */
+.fiap-text {
+  margin-top: 10px; /* Espaço entre "Enviar R$ 100,00 para:" e "FIAP" */
+}
+
+
+/* Estilo para a nova div com texto "Instruções:" */
+.instructions-text {
+  margin-top: 70px; /* Espaçamento maior entre info-text e instructions-text */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  text-align: left; /* Alinhamento do texto à esquerda */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  width: calc(100% - 160px); /* Largura da div - margem esquerda do botão - largura do botão */
+  margin-left: 100px; /* Alinhamento horizontal com o botão */
+}
+
+/* Estilo para a nova div "Vencimento: 22/11 - 18:00" */
+.additional-info:last-child {
+  font-size: 18px; /* Tamanho da fonte menor */
+  text-align: left; /* Alinha o texto à esquerda */
+  width: calc(100% - 160px); /* Largura da div - margem esquerda do botão - largura do botão */
+  margin-left: 100px; /* Alinhamento horizontal com o botão */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+
+/* Estilo para a div que conterá o QR Code */
+.qr-code-container {
+ 
+  width: 18%; /* Largura da div */
+  height: 18%; /* Altura da div */
+  margin: 20vh auto 20px; /* Margem superior reduzida para mover para cima */
+}
+
+
+/* Estilo para o botão "Copiar QR Code" */
+.copy-button {
+  margin-top: 10px; /* Espaçamento superior */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  padding: 12px 24px; /* Espaçamento interno do botão */
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: #9c2727; /* Cor de fundo vermelha mais escura */
+  color: white; /* Cor do texto em branco */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor para apontar */
+  display: block; /* Torna o botão um elemento de bloco */
+  margin-left: auto; /* Alinha o botão à direita */
+  margin-right: auto; /* Alinha o botão à esquerda */
+  transition: box-shadow 0.3s; /* Efeito de transição para a sombra */
+}
+
+/* Efeito de pressionamento quando o botão é clicado */
+.copy-button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset; /* Sombra para simular pressionamento */
+  transform: translateY(1px); /* Efeito de levantamento */
+}
+
+/* Estilo para a nova div "Valor: R$100,00" */
+.value-text {
+  margin-top: 40px; /* Aumenta mais o espaçamento superior */
+  font-size: 25px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  width: 100%; /* Largura da div */
+  text-align: center; /* Alinhamento do texto ao centro */
+}
+
+.debit-text {
+  font-size: 18px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  width: 100%; /* Largura da div */
+}
+
+/* Estilo para a div de notificação */
+.notification {
+  position: absolute;
+  bottom: 50px; /* Distância em relação ao topo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo opaco */
+  color: #fff; /* Cor do texto */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Borda arredondada */
+}
